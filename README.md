@@ -6,15 +6,15 @@ This is a final semestral project for a 1st year of ČVUT FEL - SIT in subect ZW
 
 
 ### Features
-- user accounts 
-- modifying account details
-- commenting
-- adding articles
-- responsive design
-- communication with PostgreSQL database
+- user accounts 👥
+- modifying account details ⚙️
+- commenting ✍️
+- adding articles 📰
+- responsive design 📱
+- communication with PostgreSQL database 📂
 
 ### Used Technologies
-- PHP
+- PHP 
 - PostgreSQL
 - WebStorm
 
