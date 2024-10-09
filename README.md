@@ -15,7 +15,7 @@
 │   ├── index.php          # vstupní bod webové stránky (route controller)
 │   └── .htaccess          # nastavení serveru (např. přesměrování na index.php)
 │
-├── /app                   # aplikační logika
+├── /src                   # aplikační logika
 │   ├── /controllers       # kontrolery pro jednotlivé stránky
 │   │   ├── HomepageController.php
 │   │   ├── NewsController.php
