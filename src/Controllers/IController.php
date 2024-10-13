@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 interface IController {
-
-    public function show(): void;
+    public function render(): void;
 
 }

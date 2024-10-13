@@ -3,12 +3,13 @@
 namespace App\Controllers;
 
 class HomepageController {
-    private $views = __DIR__ . '/../../src/Views/';
-    public function show(): void {
-        $title = "Homepage";
+    private $views = ROOT . 'Views/';
+    public function render(): void {
+        $title = "ZONMB";
         $content = "Welcome to the homepage!";
-        
-        echo "<h1>$content</h1>";
-        include $this->views . 'homepage.php';
+
+        include $this->views . 'Templates/header.php'; // Import start of HTML, HEAD and Nav bar
+        include $this->views . 'homepage.php'; // Import page content
+        include $this->views . 'Templates/footer.php'; // Import footer
     }
 }

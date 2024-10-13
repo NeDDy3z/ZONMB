@@ -1,9 +1,14 @@
 <?php
     declare(strict_types=1);
+
+    namespace App\Controllers;
+
     define('ROOT', dirname(__DIR__) . '/src/');
 
-    use App\Controllers\HomepageController;
-    require __DIR__ . '/../src/Controllers/HomepageController.php';
+    require ROOT.'/../vendor/autoload.php';
+    require ROOT.'/../src/Controllers/HomepageController.php';
+    //require ROOT.'/../src/Controllers/NewsController.php';
+    //require ROOT.'/../src/Controllers/ArticleController.php';
 
 
 
@@ -13,20 +18,12 @@
     switch ($request) {
         case '/' :
             $controller = new HomepageController();
-
             break;
         default:
             http_response_code(404);
-            echo "Page not found!";
+            echo "<h1>Page not found! <a href='/'>Go back</a></h1>";
             break;
     }
 
-
-    // Import start of HTML, HEAD and Nav bar
-    include ROOT . 'Views/Templates/header.php';
-
     // Show page content
-    $controller->show();
-
-    // Import footer
-    include ROOT . 'Views/Templates/footer.php';
+    $controller->render();
